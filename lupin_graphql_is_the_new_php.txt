@@ -1,0 +1,97 @@
+# SUMMARY
+Lupin, a 22-year-old co-founder of Lupin and Homes, discusses GraphQL security, highlighting vulnerabilities, tools, and techniques for identifying and exploiting weaknesses.
+
+Source: https://www.youtube.com/watch?v=tIo_t5uUK50
+
+# IDEAS:
+- Lupin co-founded Lupin and Homes and has been bug hunting on HackerOne for four years.
+- GraphQL is complex and can be a challenging target for security testing.
+- GraphQL allows clients to request specific data without needing versioning.
+- Operations in GraphQL include queries, mutations, and subscriptions.
+- Introspection in GraphQL allows describing the entire schema and operations.
+- Disabling introspection is a best practice for GraphQL security.
+- Clairvoyance is a tool that fuzzes GraphQL fields to reconstruct introspection schemas.
+- J Wizzle is a commercial tool that generates word lists from GraphQL queries in JavaScript.
+- J Luce is an open-source alternative to J Wizzle, requiring custom code and setup.
+- Privilege escalation can occur if security is applied only at the query level.
+- WebSocket hijacking can lead to vulnerabilities if authentication is solely cookie-based.
+- Web application firewalls may not block introspection queries sent via WebSockets.
+- Cross-site WebSocket hijacking allows reading responses, unlike traditional CSRF.
+- Text/plain content type can bypass same-origin policy in certain GraphQL setups.
+- GraphQL's latency can be exploited for cross-site search vulnerabilities.
+- Detailed knowledge of GraphQL can lead to significant bug bounties.
+- Combining multiple techniques can reveal undocumented fields and operations.
+- Understanding business logic is crucial for identifying security flaws in GraphQL.
+- Automated tools can reduce false positives and improve efficiency in bug hunting.
+- Real-world examples demonstrate the practical application of these techniques.
+
+# INSIGHTS:
+- Disabling introspection in GraphQL is crucial to prevent schema exposure.
+- WebSockets can bypass firewalls, making them a potential security risk.
+- Privilege escalation often exploits security gaps between query and object levels.
+- Custom scripts can automate the identification of GraphQL endpoints.
+- Effective bug hunting in GraphQL requires a blend of automation and manual analysis.
+- Cross-site search vulnerabilities leverage server response times for data leakage.
+- Combining GraphQL's introspection and Clairvoyance can reconstruct schema data.
+- Latency in GraphQL queries can be a significant indicator of security issues.
+- Cookie-based authentication in WebSockets can lead to significant vulnerabilities.
+- Using tools like `jswzl` can streamline the creation of effective word lists.
+
+# QUOTES:
+- "I hate GraphQL because it’s laggy, complex, and I never understood subscriptions."
+- "GraphQL is an ever-evolving API endpoint where you do not need versioning anymore."
+- "Introspection is like a Swagger that will be updated automatically and is present natively in GraphQL."
+- "Disabling introspection is actually one of the best practices in GraphQL security."
+- "Clairvoyance will fuzz all the keywords present in your word list until it matches a 'did you mean' response."
+- "WebSockets are so cool because you can just send your WebSocket and bypass it."
+- "Every time you see a GraphQL, check if they enable WebSockets and cookie-based authentication."
+- "GraphQL is so laggy, but what I tried is to create some kind of denial of service condition."
+- "The technique of cross-site WebSocket hijacking is like the CSRF of WebSockets."
+- "Cross-site search vulnerabilities can be exploited by leveraging GraphQL's latency."
+
+# HABITS:
+- Automating the identification of GraphQL endpoints using custom scripts.
+- Using Clairvoyance to fuzz and reconstruct GraphQL schemas.
+- Utilizing commercial and open-source tools to generate effective word lists.
+- Combining multiple techniques for comprehensive bug hunting.
+- Analyzing server response times to identify potential vulnerabilities.
+- Continuously updating knowledge on best practices in GraphQL security.
+- Leveraging WebSockets to bypass traditional security measures.
+- Integrating business logic understanding into security assessments.
+- Using real-world examples to validate security techniques.
+- Conducting manual analysis alongside automated tools for thorough testing.
+
+# FACTS:
+- GraphQL allows clients to request only the data they want, reducing over-fetching.
+- Introspection in GraphQL can describe the entire schema and operations.
+- Disabling introspection is a common best practice for securing GraphQL APIs.
+- WebSockets can be used to bypass web application firewall rules.
+- Cookie-based authentication in WebSockets can lead to significant vulnerabilities.
+- GraphQL's latency can be exploited for cross-site search vulnerabilities.
+- Tools like Clairvoyance can fuzz GraphQL fields to reconstruct introspection schemas.
+- J Wizzle and J Luce are tools for generating word lists from GraphQL queries in JavaScript.
+- Privilege escalation can occur if security is applied only at the query level.
+- Cross-site WebSocket hijacking allows reading responses, unlike traditional CSRF.
+
+# REFERENCES:
+- Clairvoyance
+- jswzl
+- jscluice
+- "Black Hat GraphQL" book by Nick, Alex, and Dov Fari
+- Burp Suite
+- caido
+- GQLSpection
+- HackerOne
+- Lupin and Homes
+
+# RECOMMENDATIONS:
+- Disable introspection in GraphQL to prevent schema exposure.
+- Use WebSockets cautiously, considering potential security risks.
+- Apply security measures at both query and object levels.
+- Automate GraphQL endpoint identification using custom scripts.
+- Combine automation and manual analysis for effective bug hunting.
+- Leverage server response times to identify cross-site search vulnerabilities.
+- Use Clairvoyance to fuzz and reconstruct GraphQL schemas.
+- Opt for tools like J Wizzle for generating effective word lists.
+- Understand business logic to identify security flaws.
+- Continuously update knowledge on best practices in GraphQL security.
