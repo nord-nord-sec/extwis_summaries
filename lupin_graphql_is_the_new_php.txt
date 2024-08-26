@@ -11,8 +11,8 @@ Source: https://www.youtube.com/watch?v=tIo_t5uUK50
 - Introspection in GraphQL allows describing the entire schema and operations.
 - Disabling introspection is a best practice for GraphQL security.
 - Clairvoyance is a tool that fuzzes GraphQL fields to reconstruct introspection schemas.
-- J Wizzle is a commercial tool that generates word lists from GraphQL queries in JavaScript.
-- J Luce is an open-source alternative to J Wizzle, requiring custom code and setup.
+- jswzl is a commercial tool that generates word lists from GraphQL queries in JavaScript.
+- jsluice is an open-source alternative to J Wizzle, requiring custom code and setup.
 - Privilege escalation can occur if security is applied only at the query level.
 - WebSocket hijacking can lead to vulnerabilities if authentication is solely cookie-based.
 - Web application firewalls may not block introspection queries sent via WebSockets.
@@ -69,14 +69,14 @@ Source: https://www.youtube.com/watch?v=tIo_t5uUK50
 - Cookie-based authentication in WebSockets can lead to significant vulnerabilities.
 - GraphQL's latency can be exploited for cross-site search vulnerabilities.
 - Tools like Clairvoyance can fuzz GraphQL fields to reconstruct introspection schemas.
-- J Wizzle and J Luce are tools for generating word lists from GraphQL queries in JavaScript.
+- jswzl and jsluice are tools for generating word lists from GraphQL queries in JavaScript.
 - Privilege escalation can occur if security is applied only at the query level.
 - Cross-site WebSocket hijacking allows reading responses, unlike traditional CSRF.
 
 # REFERENCES:
 - Clairvoyance
 - jswzl
-- jscluice
+- jsluice
 - "Black Hat GraphQL" book by Nick, Alex, and Dov Fari
 - Burp Suite
 - caido
