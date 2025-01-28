@@ -1,5 +1,7 @@
 ## SUMMARY
 
+Source: https://youtu.be/5DwyI6lyz5o?si=vf6GnP6gCWjcA_k2
+
 Diego, a software engineer in London, shares strategies for thriving while working from home, including setting boundaries and creating a work-life balance.
 
 ## IDEAS
